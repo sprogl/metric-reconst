@@ -1,0 +1,342 @@
+\documentclass[preprint,aps,nofootinbib,a4paper,titlepage,superscriptaddress,longbibliography,amsfonts,amssymb,amsmath]{revtex4-2}
+
+\newcommand{\mr}{\ms\hline\ms}
+\usepackage{etoolbox}
+\usepackage{IEEEtrantools}
+\usepackage{microtype}
+\usepackage[toc,title,page,titletoc]{appendix}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage{xfrac}
+\usepackage{lmodern}
+\usepackage[a4paper]{geometry}
+\usepackage{hyperref}
+\usepackage{mathbbol}
+
+%Tikz
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows.meta}
+\tikzset{snake it/.style={decorate, decoration=snake}}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows,shapes,positioning}
+\usetikzlibrary{decorations.markings}
+\tikzstyle arrowstyle=[scale=1]
+\tikzstyle directed=[postaction={decorate,decoration={markings,mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
+\tikzstyle reverse directed=[postaction={decorate,decoration={markings,mark=at position .65 with {\arrowreversed[arrowstyle]{stealth};}}}]
+
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+
+\tikzset{-<-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow{<}}},postaction={decorate}}}
+
+% Calligraphic letters
+\renewcommand{\S}{\mathcal{S}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\T}{\mathcal{T}}
+% \newcommand{\Lie}{\mathcal{L}}
+\renewcommand{\O}{\mathcal{O}}
+\renewcommand{\P}{\mathcal{P}}
+
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sC}{\mathscr{C}}
+
+\newcommand{\emm}{m}
+\newcommand{\ess}{s}
+
+% GHP related symbolds
+%\newcommand{\GHPwt}{\circeq}
+% \newcommand{\GHPLie}{\text{\L}}
+%
+%\newcommand{\sib}{\bar{\sigma}}
+%\newcommand{\epb}{\bar{\epsilon}}
+%\newcommand{\kab}{\bar{\kappa}}
+%\newcommand{\beb}{\bar{\beta}}
+% \newcommand{\rhb}{\bar{\rho}}
+%\newcommand{\pib}{\bar{\pi}}
+%\newcommand{\alb}{\bar{\alpha}}
+% \newcommand{\tab}{\bar{\tau}}
+%\newcommand{\gab}{\bar{\gamma}}
+%\newcommand{\mub}{\bar{\mu}}
+%\newcommand{\lab}{\bar{\lambda}}
+%\newcommand{\nub}{\bar{\nu}}
+%
+% \newcommand{\kap}{\kappa'}
+% \newcommand{\sip}{\sigma'}
+% \newcommand{\rhp}{\rho'}
+% \newcommand{\tap}{\tau'}
+%\newcommand{\bep}{\beta'}
+%\newcommand{\epp}{\epsilon'}
+
+\font\ec=ecrm0800 at 12pt
+\newcommand{\thorn}{\hbox{\ec\char'336}}
+\renewcommand{\eth}{\hbox{\ec\char'360}}
+%\renewcommand{\th}{\hbox{\ec\char'336}}
+%\newcommand{\edth}{\hbox{\ec\char'360}}
+%\newcommand{\thp}{\hbox{\ec\char'336}'}
+%\newcommand{\edthp}{\hbox{\ec\char'360}'}
+%\newcommand{\Dbar}{\tilde \edth}
+%\newcommand{\Nbar}{\tilde \th'}
+%\newcommand{\mb}{\bar{m}}
+
+\newcommand{\pheq}{\phantom{=}}
+
+% Chandrasekhar ops
+\newcommand{\chand}[2]{\,{}_{#1} \mathcal{L}_{#2}}
+
+% Theorems, etc.
+\newtheorem{theorem}{Theorem}
+\newtheorem*{corollary}{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{exercise}{Exercise}
+
+
+% Real and imaginary part symbols
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+% Spheroidal harmonics
+\newcommand{\swsY}[3]{\,{}_{#1}Y_{#2\, #3}}
+\newcommand{\sws}[2]{\,{}_{#1}#2}
+%\newcommand{\swss}[2]{S_{\emm, \lambda}^{[#1], (#2)}}
+%\newcommand{\swsy}[1]{\, {}_{#1}Y^{\phantom{\textrm{p}}}_{\ell, \emm}}
+%\newcommand{\swsl}[2]{\lambda^{[#1], (#2)}_\emm}
+%\newcommand{\swsc}[2]{C_{\emm, \lambda}^{[#1], (#2)}}
+%\newcommand{\swsp}[2]{P_{\emm, \lambda}^{[#1], (#2)}}
+
+%% Sph. harmonic defs (Peter)
+%\newcommand{\Y}[1]{\, {}_{#1}Y^{\phantom{\textrm{p}}}_{\ell, \emm}}
+%\newcommand{\bY}[1]{\, {}_{#1}\bar{Y}^{\phantom{\textrm{p}}}_{\ell, \emm}}
+%\newcommand{\Yp}[1]{\, {}_{#1}Y^\textrm{p}_{\ell, \emm}}
+%\newcommand{\bYp}[1]{\, {}_{#1}\bar{Y}^\textrm{p}_{\ell, \emm}}
+%\newcommand{\Ym}[2]{\, {}_{#1}Y_{\ell, #2}}
+%\newcommand{\Ylm}[3]{\, {}_{#1}Y_{#2, #3}}
+%\newcommand{\bYlm}[3]{\, {}_{#1} \bar{Y}_{#2, #3}}
+%\newcommand{\C}[1]{\lambda_{\ell, #1}}
+%\newcommand{\blambda}{{\mkern0.75mu\mathchar '26\mkern -9.75mu\lambda}}
+
+% Other mathematical symbols
+\newcommand{\widebar}[1]{\mathop{\overline{#1}}}
+\newcommand{\preindex}[2]{\,{}_{#2}#1}
+\newcommand{\half}{\tfrac{1}{2}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+% \newcommand{\pd}{\partial}
+\newcommand{\dbd}[1]{\dfrac{\partial}{\partial #1}}
+\newcommand{\intd}[1]{\textrm{d} #1}
+\newcommand{\lie}[1]{\mathcal{L}_{#1}}
+% \newcommand{\covlie}[1]{\L{}_#1}
+\newcommand{\sforall}{\quad \forall}
+
+% Sections and Subsections
+\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+%% Equations
+%%\def\ben{\begin{equation}}
+%%\def\een{\end{equation}}
+%%\def\bena{\begin{eqnarray}}
+%%\def\eena{\end{eqnarray}}
+%\newcommand{\non}{\nonumber}
+
+% Standard operators
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+% Differential operators
+\newcommand{\dd}{\textrm{d}}
+\newcommand{\cX}{\mathcal{X}}
+
+% Spaces
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+
+% Vahid's commands
+\newcommand{\GHPw}[2]{\left\{ #1, #2 \right\}}
+\newcommand{\nls}{\phantom{\frac{1}{\rho}}}
+
+% Christiane's commands
+\newcommand{\rC}{\mathrm{C}}
+\newcommand{\rN}{\mathrm{N}}
+\newcommand{\rU}{\mathrm{U}}
+\newcommand{\rI}{\mathrm{I}}
+\newcommand{\rII}{\mathrm{II}}
+\newcommand{\rIII}{\mathrm{III}}
+\newcommand{\rIV}{\mathrm{IV}}
+
+\newcommand{\mA}{\mathcal{A}}
+\newcommand{\mB}{\mathcal{B}}
+\newcommand{\mC}{\mathcal{C}}
+\newcommand{\mD}{\mathcal{D}}
+\newcommand{\mE}{\mathcal{E}}
+\newcommand{\mF}{\mathcal{F}}
+\newcommand{\mH}{\mathcal{H}}
+\newcommand{\scrI}{\mathcal{I}}
+\newcommand{\mK}{\mathcal{K}}
+\newcommand{\mL}{\mathcal{L}}
+\newcommand{\mM}{\mathcal{M}}
+\newcommand{\mN}{\mathcal{N}}
+\newcommand{\mO}{\mathcal{O}}
+\newcommand{\mR}{\mathcal{R}}
+\newcommand{\mS}{\mathcal{S}}
+\newcommand{\mT}{\mathcal{T}}
+\newcommand{\mU}{\mathcal{U}}
+\newcommand{\mV}{\mathcal{V}}
+
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bS}{\mathbb{S}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\fL}{\mathfrak{L}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fN}{\mathfrak{N}}
+
+\newcommand{\mHc}{\mathcal{H}_c}
+\newcommand{\mCH}{\mathcal{CH}}
+\newcommand{\ome}{\omega_{\rI}}
+\newcommand{\omi}{\omega_{\rII}}
+\newcommand{\ri}{\mathrm{in}}
+\newcommand{\ru}{\mathrm{up}}
+\newcommand{\omegap}{\omega^+}
+
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Diff}{Diff}
+
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\rm}{\normalfont\bfseries}{\mathrm}
+
+% Udefineds
+\newcommand{\dOm}{\textrm{UNDEFINED}}
+\newcommand{\vt}[1]{\textcolor{red}{Vahid: #1}}
+\newcommand{\sh}[1]{\textcolor{red}{Stefan: #1}} 
+
+
+\newcommand{\ud}{d}
+\newcommand{\del}{\partial}
+
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vth}{{\vartheta}}
+
+\newcommand{\rin}{{\mathrm{in}}}
+\newcommand{\rup}{{\mathrm{up}}}
+\newcommand{\rout}{{\mathrm{out}}}
+\newcommand{\rdown}{{\mathrm{down}}}
+\newcommand{\reg}{{\mathrm{reg}}}
+\newcommand{\sing}{{\mathrm{sing}}}
+
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\diag}{diag}
+
+\newcommand{\defeq}{\mathrel{:=}}
+\newcommand{\F}{{}_2 F_1}
+\newcommand{\btheta}{\boldsymbol{\theta}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\renewcommand{\bm}{\boldsymbol{m}}
+\newcommand{\nn}{\nonumber}
+
+%Peter's shortcuts
+\newcommand{\bphi}{\bar \phi}
+\newcommand{\bx}{\bar x}
+\newcommand{\bt}{\bar t}
+
+
+\begin{document}
+
+\title{Fist Order Metric Reconstruction in Schwarzschld spacetime}
+
+
+\author{Vahid Toomani}
+\email{vahid.toomani.2@uni-leipzig.de}
+\affiliation{Institut f\"ur Theoretische Physik, Universit\"at Leipzig, Leipzig, Germany and \\
+Max-Planck-Institute MiS, Leipzig, Germany}
+
+%\author{Stefan Hollands}
+%\email{stefan.hollands@uni-leipzig.de}
+%\affiliation{Institut f\"ur Theoretische Physik, Universit\"at Leipzig, Leipzig, Germany and \\
+%Max-Planck-Institute MiS, Leipzig, Germany}
+
+\date{\today}
+
+
+\begin{abstract}
+My notes!
+\end{abstract}
+
+\maketitle
+\tableofcontents
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{section-1.tex}
+
+\include{section-2.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\include{section 1.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{references.bib}
+
+
+\end{document}
+
+%@article{PhysRevA.42.1027,
+%  title = {Gaussian-orthogonal-ensemble level statistics in a one-dimensional system},
+%  author = {Wu, Hua and Valli\`eres, Michel and Feng, Da Hsuan and Sprung, Donald W. L.},
+%  journal = {Phys. Rev. A},
+%  volume = {42},
+%  issue = {3},
+%  pages = {1027--1032},
+%  numpages = {0},
+%  year = {1990},
+%  month = {Aug},
+%  publisher = {American Physical Society},
+%  doi = {10.1103/PhysRevA.42.1027},
+%  url = {https://link.aps.org/doi/10.1103/PhysRevA.42.1027}
+%}
+%
+%%

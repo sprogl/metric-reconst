@@ -1,0 +1,163 @@
+\section{Components of Homogenous $\Phi$}
+
+In this section, I express how one achieves a metric perturbation that falls fast enough at $\mathscr{I}^+$. To achieve this end I used the procedure demonstrated in details by Hollands et. al. in \cite{Hollands:2024iqp}.
+This method is based on the GHZ reconstruction \cite{Green:2019nam} combined with the puncture scheme \cite{Toomani:2021jlo}.
+The puncture scheme implemented in \cite{Toomani:2021jlo} breaks the retarded solution $h^\text{ret}_{ab}$ into two parts of punctured field $h^\text{P}_{ab}$ which contains the singular field field and the residual part $h^\text{Res}_{ab}$. The residual field satisfy a homogeneous linearized Einstein equation sourced by $\mathcal{E} h^\text{P}_{ab}$ away from the singular source, i.e.,
+
+\begin{equation}\label{LEEofResField}
+\mathcal{E} h^\text{Res}_{ab} = - \mathcal{E} h^\text{P}_{ab}.
+\end{equation}
+
+The puncture field is an estimate for the singular field in a neighborhood of the orbiting compact object. This estimate is given by the product of the singular field and a $W(r, \theta, \phi)$ with the following properties:
+
+\begin{enumerate}
+\item $W$ is compactly supported (usually $W = 0$ for $r < r_\text{min}$ and $r > r_\text{max}$, the support of $W$ is called puncture region;
+\item $W = 1$ on the location of the compact object.
+\end{enumerate}
+
+One obvious choice would be $W(r) = \Theta(r - r_\text{min}) - \Theta(r_\text{max} - r)$ but one might choose a smooth one too. Consequently, residual field $h^\text{Res}_{ab}$ is only sourced in the puncture region.
+
+Applying $\mathcal{S}$ on both sides of \eqref{LEEofResField} and using the Wald identity \cite{Wald identity paper},
+
+\begin{equation}
+\mathcal{O} \psi^\text{Res}_0 = - \mathcal{S}^{ab} T^\text{P}_{ab} = - T^\text{P}_0.
+\end{equation}
+
+Using the Wald identity \cite{Wald identity paper}, we have
+
+
+
+Combining eq. 123, eq. 124 and eq. J.1a of \cite{Hollands:2024iqp} gives
+
+\begin{equation}
+2 \tilde{\thorn}' \tilde{\thorn}' \tilde{\thorn}' \bar{\psi}^{5 \circ}_0 = \tilde{\eth}' \tilde{\eth}' \tilde{\eth}' \tilde{\eth}' \tilde{\eth} \tilde{\eth} \tilde{\eth} \tilde{\eth} \bar{f}^\circ - 9 \Psi^\circ \bar{\Psi}^\circ \tilde{\thorn}' \tilde{\thorn}' \bar{f}^\circ.
+\end{equation}
+
+By expanding $\bar{f}^\circ$ and $\bar{\psi}^{5 \circ}_0$ in spheroidal (spin-weighted harmonics in Schwarzschild) harmonics, one can reverse this equation and obtain $\bar{f}^\circ$. Next, we obtain foloowing Held-like scalars $\Phi^{i \circ}$ from $\bar{f}^\circ$ (and potentially ODEs in terms of $\frac{\partial}{\partial u}$).
+
+\begin{equation}
+\tilde{\thorn}' \tilde{\thorn}' \Phi^{0 \circ} = - \frac{1}{3} \tilde{\eth}' \tilde{\eth}' \tilde{\eth}' \tilde{\eth} \tilde{\eth} \tilde{\eth} \bar{f}^\circ - \left[ 2 \bar{\tau}^\circ \tilde{\eth}' \tilde{\eth} \tilde{\eth} + \Psi^\circ \tilde{\eth}' \tilde{\eth} + 2 \Psi^\circ \rho^{\prime \circ} \right] \tilde{\thorn}' \bar{f}^\circ
+\end{equation}
+
+\begin{equation}
+\tilde{\thorn}' \Phi^{1 \circ} = - \tilde{\eth}' \tilde{\eth}' \tilde{\eth} \tilde{\eth} \bar{f}^\circ - \left[ 4 \bar{\tau}^\circ \tilde{\eth} + 3 \Psi^\circ \right] \tilde{\thorn}' \bar{f}^\circ
+\end{equation}
+
+\begin{equation}
+\Phi^{2 \circ} = -2 \tilde{\eth}' \tilde{\eth} \bar{f}^\circ,
+\end{equation}
+
+\begin{equation}
+\Phi^{3 \circ} = -2 \tilde{\thorn}' \bar{f}^\circ,
+\end{equation}
+
+\begin{equation}
+\bar{\zeta}^\circ_m = \tilde{\eth} \bar{f}^\circ,
+\end{equation}
+
+\begin{equation}
+\tilde{\thorn}' \zeta^\circ_l = - \Re \left\{ \tilde{\eth} \tilde{\eth} \bar{f}^\circ \right\},
+\end{equation}
+
+\begin{equation}
+\tilde{\thorn}' \zeta^\circ_n = - \Re \left\{ \tilde{\eth}' \tilde{\eth} \tilde{\eth} \tilde{\eth} \bar{f}^\circ - \rho^{\prime \circ} \tilde{\eth} \tilde{\eth} \bar{f}^\circ - 2 \tau^\circ \tilde{\eth} \tilde{\thorn}' \bar{f}^\circ - \frac{1}{2} \Omega^\circ \tilde{\eth} \tilde{\eth} \tilde{\thorn}' \bar{f}^\circ \right\},
+\end{equation}
+
+kslfhadlf
+
+\begin{equation}
+\begin{split}
+h_{ab} & \to h_{ab} - \mathcal{L}_\zeta g_{ab}\\
+\Phi & \to \Phi + \Phi^{0 \circ} + \Phi^{1 \circ} \frac{1}{\rho} + \Phi^{2 \circ} \frac{1}{\rho^2} + \Phi^{3 \circ} \frac{1}{\rho^3}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\mathcal{L}_\zeta g_{ab} l^a & = 0\\
+\mathcal{L}_\zeta g_{ab} m^a \bar{m}^b & = 0
+\end{split}
+\end{equation}
+
+\begin{multline}
+\mathcal{L}_\zeta g_{ab} n^a n^b = \Re \bigg[ 4 \rho \bar{\rho} \bar{\tau}^\circ \tilde{\eth}' \tilde{\eth} \tilde{\eth} \xi^\circ_l - 4 \rho^2 \bar{\rho} \bar{\tau}^{\circ 2} \tilde{\eth} \tilde{\eth} \xi^\circ_l + 2 \rho^2 \Psi^\circ \tilde{\eth}' \tilde{\eth} \xi^\circ_l + 4 \rho^2 \bar{\rho} \Psi^\circ \bar{\tau}^\circ \tilde{\eth} \xi^\circ_l\\
+- 2 \tilde{\eth}' \tilde{\eth}' \tilde{\eth}' \tilde{\eth} f^\circ - 2\left( \frac{1}{\rho} + 4 \Omega^\circ \right) \tilde{\eth}' \tilde{\eth}' \tilde{\thorn}' f^\circ - 4 \rho \bar{\rho} \Omega^\circ \bar{\tau}^\circ \tilde{\eth}' \tilde{\eth}' \tilde{\eth} f^\circ + 4 \left( 4 + \bar{\rho} \Omega^\circ - \rho \bar{\rho} \Omega^{\circ 2} \right) \bar{\tau}^\circ \tilde{\eth}' \tilde{\thorn}' f^\circ\\
+- \left( 8 \rho^{\prime \circ} + 3 \rho \Psi^\circ + 3 \bar{\rho} \bar{\Psi}^\circ + 2 \rho^2 \Omega^{\circ 2} \Psi^\circ + 8 \rho \bar{\rho} \tau^\circ \bar{\tau}^\circ \right) \tilde{\eth}' \tilde{\eth}' f^\circ + 4 \rho^2 \bar{\tau}^{\circ 2} \tilde{\eth}' \tilde{\eth} f^\circ\\
++ 4 \rho \left( \rho + 2 \bar{\rho} \right) \Omega^\circ \bar{\tau}^{\circ 2} \tilde{\thorn}' f^\circ + 8 \rho^2 \bar{\rho} \tau^\circ \bar{\tau}^{\circ 2} \tilde{\eth}' f^\circ + 4 \rho \bar{\rho} \bar{\Psi}^\circ \bar{\tau}^\circ \tilde{\eth}' f^\circ - 24 \rho \bar{\rho} \Omega^\circ \rho^{\prime \circ} \bar{\tau}^\circ \tilde{\eth}' f^\circ + 16 \rho^2 \rho^{\prime \circ} \bar{\tau}^{\circ 2} f^\circ \bigg]
+\end{multline}
+
+\begin{multline}
+\mathcal{L}_\zeta g_{ab} n^a m^b = \bar{\rho} \tilde{\eth}' \tilde{\eth} \tilde{\eth} \xi^\circ_l - 2 \rho \bar{\rho} \bar{\tau} \tilde{\eth} \tilde{\eth} \xi^\circ_l + \rho (\rho + \bar{\rho}) \Psi^\circ \tilde{\eth} \xi^\circ_l - \bar{\rho} \Omega^\circ \tilde{\eth}' \tilde{\eth}' \tilde{\eth} f^\circ + 2 \rho \bar{\tau}^\circ \tilde{\eth}' \tilde{\eth} f^\circ\\
++ \left(\frac{1}{\rho} + \frac{\bar{\rho}}{\rho} \Omega^\circ - \bar{\rho} \Omega^{\circ 2} \right) \tilde{\eth}' \tilde{\thorn}' f^\circ + 2 (\rho + \bar{\rho}) \Omega^\circ \bar{\tau}^\circ \tilde{\thorn}' f^\circ - 2 \bar{\rho} \tau^\circ \tilde{\eth}' \tilde{\eth}' f^\circ - \frac{\rho^2}{\bar{\rho}} \Psi^\circ \tilde{\eth}' f^\circ\\
++ \bar{\rho} \bar{\Psi}^\circ \tilde{\eth}' f^\circ - 6 \bar{\rho} \Omega^\circ \rho^{\prime \circ} \tilde{\eth}' f^\circ + 4 \rho \bar{\rho} \tau^\circ \bar{\tau}^\circ \tilde{\eth}' f^\circ + 8 \rho \rho^{\prime \circ} \bar{\tau}^\circ f^\circ
+\end{multline}
+
+\begin{equation}
+\mathcal{L}_\zeta g_{ab} m^a m^b = - 2 \bar{\rho} \tilde{\eth} \tilde{\eth} \xi^\circ_l + 2 \tilde{\eth}' \tilde{\eth} f^\circ + 2 \Omega^\circ \tilde{\thorn}' f^\circ + 4 \bar{\rho} \tau^\circ \tilde{\eth}' f^\circ + 8 \rho^{\prime \circ} f^\circ
+\end{equation}
+
+\section{Sphroidal Expansions}
+
+\begin{equation}
+\psi^{1 \circ}_4 = \sum_{\ell \emm} \int \intd{\omega} \psi^{1 \circ}_{4, \ell \emm}(\omega) \sws{-2}{S_{\ell \emm}} (\theta, \varphi_\star ; a \omega) e^{-i \omega u}
+\end{equation}
+
+\begin{equation}
+\psi^{5 \circ}_0 = \sum_{\ell \emm} \int \intd{\omega} \psi^{5 \circ}_{0, \ell \emm}(\omega) \sws{+2}{S_{\ell \emm}} (\theta, \varphi_\star ; a \omega) e^{-i \omega u}
+\end{equation}
+
+\begin{multline}
+\psi^{1 \circ}_{4, \ell \emm}(\omega) = \frac{\omega^4}{\sws{-2}{B_{\ell \emm}}(a \omega) \sws{-2}{\bar{B}_{\ell -\emm}}(-a \omega) + 9 M^2 \omega^2}\\
+\left[ \sws{-2}{\bar{B}_{\ell -\emm}}(-a \omega) \psi^{5 \circ}_{0, \ell \emm}(\omega) + 3 i \omega (-1)^\emm \bar{\psi}^{5 \circ}_{0, \ell -\emm}(-\omega) \right]
+\end{multline}
+
+\begin{multline}
+\bar{h}^{1 \circ}_{m m} = \sum_{\ell \emm} \int \intd{\omega} \frac{-2 \omega^2}{\sws{-2}{B_{\ell \emm}}(a \omega) \sws{-2}{\bar{B}_{\ell -\emm}}(-a \omega) + 9 M^2 \omega^2} \times\\
+\left[ \sws{-2}{\bar{B}_{\ell -\emm}}(-a \omega) \psi^{5 \circ}_{0, \ell \emm}(\omega) + 3 i \omega (-1)^\emm \bar{\psi}^{5 \circ}_{0, \ell -\emm}(-\omega) \right] \sws{+2}{S_{\ell \emm}} (\theta, \varphi_\star ; a \omega) e^{-i \omega u}
+\end{multline}
+
+\begin{equation}
+f^\circ = \sum_{\ell \emm} \int \intd{\omega} \frac{2 i \omega^3}{\sws{-2}{B_{\ell \emm}}(a \omega) \sws{-2}{\bar{B}_{\ell -\emm}}(-a \omega) + 9 M^2 \omega^2} \psi^{5 \circ}_{0, \ell \emm}(\omega) \sws{+2}{S_{\ell \emm}} (\theta, \varphi_\star ; a \omega) e^{-i \omega u}
+\end{equation}
+
+\begin{equation}
+e^\circ = \sum_{\ell \emm} \int \intd{\omega} \frac{-4 \omega^4 (-1)^\emm}{\sws{-2}{B_{\ell \emm}}(a \omega) \sws{-2}{\bar{B}_{\ell -\emm}}(-a \omega) + 9 M^2 \omega^2} \bar{\psi}^{5 \circ}_{0, \ell -\emm}(-\omega) \sws{-2}{S_{\ell \emm}} (\theta, \varphi_\star ; a \omega) e^{-i \omega u}
+\end{equation}
+
+\section{Schwarzschild Case}
+
+\begin{equation}
+\sws{-2}{B_{\ell -\emm}}(a \omega) = \sws{2}{B_\ell} = \frac{1}{4} \frac{(\ell + 2)!}{(\ell - 2)!} = \frac{1}{4} (\ell +2) (\ell + 1) \ell (\ell - 1)
+\end{equation}
+
+\begin{equation}
+\sws{-1}{B_{\ell -\emm}}(a \omega) = \sws{1}{B_\ell} = \frac{1}{2} \frac{(\ell + 1)!}{(\ell - 1)!} = \frac{1}{2} \ell (\ell + 1)
+\end{equation}
+
+\begin{equation}
+\Phi^{0 \circ} = d^\circ = \sum_{\ell \emm} \int \intd{\omega} \frac{ - \sfrac{2}{3} i \omega (-1)^\emm}{\sws{2}{B^2_\ell} + 9 M^2 \omega^2} \left[ \sws{2}{B_\ell} \sws{1}{B_\ell} - 3iM \omega (1 + \sqrt{\sws{2}{B_{\ell}}}) \right] \bar{\psi}^{5 \circ}_{0, \ell -\emm}(- \omega) \sws{-2}{Y_{\ell \emm}} (\theta, \varphi_\star) e^{-i \omega u}
+\end{equation}
+
+\begin{equation}
+\Phi^{1 \circ} = \sum_{\ell \emm} \int \intd{\omega} \frac{ 2 \omega^2 (-1)^\emm}{\sws{2}{B^2_\ell} + 9 M^2 \omega^2} \left[ \sws{2}{B_\ell} - 3iM \omega \right] \bar{\psi}^{5 \circ}_{0, \ell -\emm}(- \omega) \sws{-2}{Y_{\ell \emm}} (\theta, \varphi_\star) e^{-i \omega u}
+\end{equation}
+
+\begin{equation}
+\Phi^{2 \circ} = \sum_{\ell \emm} \int \intd{\omega} \frac{ 4 i \omega^3 \sfrac{\sws{2}{B_\ell}}{\sws{1}{B_\ell}} (-1)^\emm}{\sws{2}{B^2_\ell} + 9 M^2 \omega^2} \bar{\psi}^{5 \circ}_{0, \ell -\emm}(- \omega) \sws{-2}{Y_{\ell \emm}} (\theta, \varphi_\star) e^{-i \omega u}
+\end{equation}
+
+\begin{equation}
+\Phi^{3 \circ} = e^\circ = \sum_{\ell \emm} \int \intd{\omega} \frac{-4 \omega^4 (-1)^\emm}{\sws{2}{B^2_\ell} + 9 M^2 \omega^2} \bar{\psi}^{5 \circ}_{0, \ell -\emm}(-\omega) \sws{-2}{Y_{\ell \emm}} (\theta, \varphi_\star) e^{-i \omega u}
+\end{equation}
+
+\begin{equation}
+\zeta^\circ_m = \sum_{\ell \emm} \int \intd{\omega} \frac{-2 i \omega^3 \sqrt{\sfrac{\sws{2}{B_\ell}}{\sws{1}{B_\ell}}}}{\sws{2}{B^2_\ell} + 9 M^2 \omega^2} \psi^{5 \circ}_{0, \ell \emm}(\omega) \sws{+1}{Y_{\ell \emm}} (\theta, \varphi_\star) e^{-i \omega u}
+\end{equation}
+
+\begin{equation}
+\zeta^\circ_l = \sum_{\ell \emm} \int \intd{\omega} \frac{\omega^2 \sqrt{\sws{2}{B_\ell}}}{\sws{2}{B^2_\ell} + 9 M^2 \omega^2} \psi^{5 \circ}_{0, \ell \emm}(\omega) \sws{0}{Y_{\ell \emm}} (\theta, \varphi_\star) e^{-i \omega u} + cc.
+\end{equation}
+
+\begin{equation}
+\zeta^\circ_n = \sum_{\ell \emm} \int \intd{\omega} \frac{-\omega^2 \sqrt{\sws{2}{B_\ell}}}{\sws{2}{B^2_\ell} + 9 M^2 \omega^2} \left( \sws{1}{B_\ell} + \frac{1}{2} \right)\psi^{5 \circ}_{0, \ell \emm}(\omega) \sws{0}{Y_{\ell \emm}} (\theta, \varphi_\star) e^{-i \omega u} + cc.
+\end{equation}
